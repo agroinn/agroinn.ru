@@ -367,6 +367,10 @@
     font-size: 1em;
     padding: 11px 0;
   }
+  form {
+  display: flex;
+  justify-content: center;
+}
 }
     }
   </style>
@@ -459,8 +463,11 @@
     <label for="country">Страна*</label>
     <input type="text" id="country" name="Страна" required>
 
+    <div class="center-container">
+  <form>
     <button type="submit" class="styled-button">Отправить заявку</button>
   </form>
+</div>
   <p class="agreement-text">
     Нажимая на кнопку, я принимаю <a href="OFFERI.html">условия соглашения</a>
   </p>
