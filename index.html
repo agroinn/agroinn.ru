@@ -367,8 +367,27 @@
     font-size: 1em;
     padding: 11px 0;
     }
-}
-    }
+@media (max-width: 600px) {
+  .trial-form-section form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  .trial-form-section form label,
+  .trial-form-section form input {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+  .trial-form-section form > div {
+    flex: 1 1 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+  }
+  }
   </style>
 </head>
   <body>
