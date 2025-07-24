@@ -128,55 +128,45 @@
   line-height: 1.6;
   margin: 0;
 }
+@media (max-width: 900px) {
+  /* планшеты и мобильные */
+}
+@media (max-width: 768px) {
+  /* мобильные */
+}
 @media (max-width: 600px) {
-  .promo-block {
-    padding: 16px 8px;
-  }
-  .promo-block h1 {
-    font-size: 1.2rem;
-  }
-  .promo-block p {
-    font-size: 1rem;
-  }
-    /* Стили для слайдера тарифных планов */
-       .tariff-slider-container {
-            overflow-x: auto;
-            -webkit-overflow-scrolling: touch; /* Для плавной прокрутки на iOS */
-            scroll-snap-type: x mandatory;
-            display: flex;
-            gap: 20px;
-            padding: 20px;
-            margin-top: 30px;
-            margin-bottom: 20px;
-        }
-
-        .tariff-card {
-          flex: 0 0 80%;
-            background-color: white;
-            color: #00026c;
-            border-radius: 10px;
-            padding: 20px;
-            min-width: 300px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            scroll-snap-align: center;
-        }
-    @media (max-width: 768px) {
-  .tariff-slider-container {
-    flex-direction: column;
-    overflow-x: visible; /* Отключить горизонтальный скролл */
-    scroll-snap-type: none;
-    gap: 12px;
-    padding: 0 0 20px 0; /* Можно уменьшить отступы */
-  }
-  .tariff-card {
-    flex: none;
-    min-width: 0;
-    width: 100%; /* На всю ширину контейнера */
-    margin: 0 auto;
-    box-sizing: border-box;
-    scroll-snap-align: unset;
-  }
+  /* маленькие смартфоны */
+}
        }
+    .images-block-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+.images-block-row > div {
+  flex: 1;
+  text-align: center;
+  margin: 0 8px;
+}
+.images-block-row img {
+  width: 80px;
+  height: 80px;
+  border-radius: 12px;
+  object-fit: cover;
+  margin-bottom: 12px;
+}
+@media (max-width: 650px) {
+  .images-block-row {
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+  }
+  .images-block-row > div {
+    margin: 0 !important;
+    width: 80vw;
+    max-width: 340px;
+  }
+}
       /* ПК-стиль: все три плана в одну строку, аккуратно распределены */
 @media (min-width: 900px) {
   .tariff-slider-container {
@@ -387,31 +377,31 @@
   </p>
 </div>
 <div style="background: rgba(0,0,44,0.15); border-radius: 16px; padding: 24px; margin-bottom: 24px;">
-  <div style="display: flex; justify-content: space-between; margin-bottom: 18px;">
-    <div style="flex: 1; text-align: center; margin: 0 8px;">
-      <img src="images/img1.jpg" alt="Товарно-молочные фермы" style="width: 80px; height: 80px; border-radius: 12px; object-fit: cover; margin-bottom: 12px;">
+  <div class="images-block-row">
+    <div>
+      <img src="images/img1.jpg" alt="Молочное направление">
       <div style="color: #eafffa; font-size: 1em;">Молочное направление</div>
     </div>
-    <div style="flex: 1; text-align: center; margin: 0 8px;">
-      <img src="images/img2.jpg" alt="Откормочные площадки" style="width: 80px; height: 80px; border-radius: 12px; object-fit: cover; margin-bottom: 12px;">
+    <div>
+      <img src="images/img2.jpg" alt="Мясное направление">
       <div style="color: #eafffa; font-size: 1em;">Мясное направление</div>
     </div>
-    <div style="flex: 1; text-align: center; margin: 0 8px;">
-      <img src="images/img3.jpg" alt="Пастбища" style="width: 80px; height: 80px; border-radius: 12px; object-fit: cover; margin-bottom: 12px;">
+    <div>
+      <img src="images/img3.jpg" alt="Пастбища и луга">
       <div style="color: #eafffa; font-size: 1em;">Пастбища и луга</div>
     </div>
   </div>
-  <div style="display: flex; justify-content: space-between;">
-    <div style="flex: 1; text-align: center; margin: 0 8px;">
-      <img src="images/img4.jpg" alt="Полеводство" style="width: 80px; height: 80px; border-radius: 12px; object-fit: cover; margin-bottom: 12px;">
+  <div class="images-block-row">
+    <div>
+      <img src="images/img4.jpg" alt="Зерновые и масличные">
       <div style="color: #eafffa; font-size: 1em;">Зерновые и масличные</div>
     </div>
-    <div style="flex: 1; text-align: center; margin: 0 8px;">
-      <img src="images/img5.jpg" alt="Овощеводство и бахчеводство" style="width: 80px; height: 80px; border-radius: 12px; object-fit: cover; margin-bottom: 12px;">
+    <div>
+      <img src="images/img5.jpg" alt="Овощные и бахчевые">
       <div style="color: #eafffa; font-size: 1em;">Овощные и бахчевые</div>
     </div>
-    <div style="flex: 1; text-align: center; margin: 0 8px;">
-      <img src="images/img6.jpg" alt="Фруктовые и ягодные сады" style="width: 80px; height: 80px; border-radius: 12px; object-fit: cover; margin-bottom: 12px;">
+    <div>
+      <img src="images/img6.jpg" alt="Фрукты и ягоды">
       <div style="color: #eafffa; font-size: 1em;">Фрукты и ягоды</div>
     </div>
   </div>
