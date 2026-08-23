@@ -710,6 +710,11 @@ p:last-child {
   background: rgba(255, 255, 255, 0.82);
 }
 
+.timeline-note {
+  margin: 22px 0 0;
+  text-align: center;
+}
+
 .timeline-badge {
   display: inline-flex;
   margin-bottom: 23px;
