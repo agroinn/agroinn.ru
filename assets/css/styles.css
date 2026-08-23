@@ -351,14 +351,17 @@ p:last-child {
 }
 
 .hero-image {
-  aspect-ratio: 16 / 10;
-  transform: rotate(1deg);
+  display: grid;
+  place-items: center;
+  aspect-ratio: 16 / 9;
+  padding: 10px;
 }
 
 .hero-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  object-position: center;
 }
 
 .status-panel {
@@ -409,6 +412,7 @@ p:last-child {
 
 .product-card {
   overflow: hidden;
+  min-width: 0;
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
   background: var(--surface);
@@ -422,20 +426,27 @@ p:last-child {
 
 .product-image {
   position: relative;
+  display: grid;
+  place-items: center;
   overflow: hidden;
+  min-width: 0;
   aspect-ratio: 16 / 10;
+  padding: 10px;
   border-bottom: 1px solid var(--border);
   background: #f0f3ed;
 }
 
 .product-image img {
+  display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  min-width: 0;
+  object-fit: contain;
+  object-position: center;
 }
 
 .product-card:first-child .product-image img {
-  object-position: left center;
+  object-position: center;
 }
 
 .image-badge {
@@ -451,6 +462,7 @@ p:last-child {
 }
 
 .product-content {
+  min-width: 0;
   padding: 25px;
 }
 
@@ -1140,7 +1152,9 @@ p:last-child {
   }
 
   .hero-visual {
+    width: 100%;
     max-width: 680px;
+    margin-inline: auto;
   }
 
   .product-grid,
@@ -1150,11 +1164,15 @@ p:last-child {
 
   .product-card {
     display: grid;
-    grid-template-columns: 0.9fr 1.1fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: stretch;
   }
 
   .product-image {
-    height: 100%;
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    aspect-ratio: auto;
     border-right: 1px solid var(--border);
     border-bottom: 0;
   }
@@ -1209,7 +1227,7 @@ p:last-child {
   }
 
   .status-panel {
-    margin: -24px 10px 0;
+    margin: 16px 0 0;
   }
 
   .product-card {
@@ -1217,6 +1235,7 @@ p:last-child {
   }
 
   .product-image {
+    width: 100%;
     height: auto;
     aspect-ratio: 16 / 10;
     border-right: 0;
