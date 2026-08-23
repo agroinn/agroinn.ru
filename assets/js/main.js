@@ -26,22 +26,3 @@ if (menuButton && menu) {
 document.querySelectorAll('[data-current-year]').forEach((element) => {
   element.textContent = String(new Date().getFullYear());
 });
-
-const reviewForm = document.querySelector('[data-review-form]');
-
-if (reviewForm) {
-  reviewForm.addEventListener('submit', (event) => {
-    event.preventDefault();
-
-    if (!reviewForm.checkValidity()) {
-      reviewForm.reportValidity();
-      return;
-    }
-
-    const status = reviewForm.querySelector('[data-form-status]');
-    if (status) {
-      status.hidden = false;
-      status.focus();
-    }
-  });
-}
