@@ -1010,31 +1010,48 @@ p:last-child {
   letter-spacing: -0.02em;
 }
 
+.legal-document h3 {
+  margin-top: 28px;
+  font-size: 1.08rem;
+  letter-spacing: -0.01em;
+}
+
 .legal-document li,
 .legal-document p {
   color: #455148;
 }
 
-.draft-badge {
-  display: inline-flex;
-  margin-bottom: 22px;
-  padding: 8px 12px;
-  border-radius: 999px;
-  color: #6d4d09;
-  background: #fff3cf;
-  font-size: 0.75rem;
-  font-weight: 850;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
+.legal-document li {
+  margin: 8px 0;
 }
 
-.placeholder-box {
-  margin: 26px 0;
-  padding: 20px;
-  border: 1px dashed #b99c58;
-  border-radius: 12px;
-  color: #604b1c;
-  background: #fffaf0;
+.legal-document a {
+  color: var(--green-dark);
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.legal-document hr {
+  margin: 42px 0 0;
+  border: 0;
+  border-top: 1px solid var(--border);
+}
+
+.legal-lead {
+  max-width: 650px;
+  font-size: 1.18rem;
+}
+
+.legal-requisites {
+  margin: 20px 0 28px;
+  padding: 22px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--surface-soft);
+}
+
+.legal-requisites p {
+  margin-bottom: 8px;
 }
 
 @media (max-width: 1080px) {
