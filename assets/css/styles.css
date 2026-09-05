@@ -298,6 +298,25 @@ p:last-child {
   background: var(--text);
 }
 
+.header-actions {
+  display: flex;
+  flex: none;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-actions .button {
+  white-space: nowrap;
+}
+
+.site-header .site-nav {
+  flex-wrap: wrap;
+}
+
+.site-header .site-nav a {
+  white-space: nowrap;
+}
+
 /* Hero */
 .hero {
   position: relative;
